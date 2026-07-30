@@ -1,10 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f1f0ed;
-  --foreground: #111110;
-  --accent: #c6f24e;
-  --accent-dark: #b6e63a;
+  --background: #f1f0ee;
+  --foreground: #000000;
+  --accent: #daf369;
+  --accent-dark: #cde85a;
 }
 
 @theme inline {
@@ -12,8 +12,8 @@
   --color-foreground: var(--foreground);
   --color-accent: var(--accent);
   --color-accent-dark: var(--accent-dark);
-  --font-display: var(--font-display), sans-serif;
-  --font-body: var(--font-body), Arial, Helvetica, sans-serif;
+  --font-body: var(--font-body), "Rethink Sans", Arial, Helvetica, sans-serif;
+  --font-sans: var(--font-body), "Rethink Sans", Arial, Helvetica, sans-serif;
 }
 
 body {
@@ -23,55 +23,15 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* ---------- Animated logo ---------- */
-@keyframes letter-in {
-  0% {
-    opacity: 0;
-    transform: translateY(48px) rotate(-10deg) scale(0.7);
-  }
-  60% {
-    opacity: 1;
-    transform: translateY(-8px) rotate(3deg) scale(1.06);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) rotate(0) scale(1);
-  }
-}
-
-@keyframes letter-float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-.logo-letter {
-  display: inline-block;
-  opacity: 0;
-  transform: translateY(48px);
-  animation: letter-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-  will-change: transform, opacity;
-}
-
-.logo-letter.is-floating {
-  animation: letter-float 3.4s ease-in-out infinite;
-  opacity: 1;
-  transform: translateY(0);
-}
-
 /* ---------- Entrance helpers ---------- */
 @keyframes paper-in {
   0% {
     opacity: 0;
-    transform: rotate(-2deg) scale(0.9);
+    transform: scale(0.9);
   }
   100% {
     opacity: 1;
-    transform: rotate(-2deg) scale(1);
+    transform: scale(1);
   }
 }
 
@@ -97,8 +57,6 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .logo-letter,
-  .logo-letter.is-floating,
   .animate-fade-up,
   .animate-paper {
     animation: none !important;

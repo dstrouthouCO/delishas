@@ -1,34 +1,34 @@
 import type { Metadata } from "next";
-import { Archivo_Black, Poppins } from "next/font/google";
+import { Rethink_Sans } from "next/font/google";
 import "./globals.css";
 
-const archivoBlack = Archivo_Black({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-display",
-  display: "swap",
-});
-
-const poppins = Poppins({
-  weight: ["400", "500", "600", "700"],
+const rethinkSans = Rethink_Sans({
   subsets: ["latin"],
   variable: "--font-body",
   display: "swap",
 });
 
+const SEO_TITLE = "Delishas: Healthy & Delicious Snacks | Coming Soon";
+const SEO_DESCRIPTION =
+  "Delishas is coming. Discover snacks that are truly delicious & guilt-free. Made with real, honest ingredients, born from a father's promise for his family.";
+
 export const metadata: Metadata = {
-  title: "DELISHAS — Coming Soon",
-  description:
-    "Something healthy. Something yummy. Something for everyone. DELISHAS is coming soon — be the first to know when we go live.",
+  title: SEO_TITLE,
+  description: SEO_DESCRIPTION,
   robots: {
     index: false,
     follow: false,
     googleBot: { index: false, follow: false },
   },
   openGraph: {
-    title: "DELISHAS — Coming Soon",
-    description: "Something healthy. Something yummy. Something for everyone.",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: SEO_TITLE,
+    description: SEO_DESCRIPTION,
   },
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${archivoBlack.variable} ${poppins.variable} h-full`}>
+    <html lang="en" className={`${rethinkSans.variable} h-full`}>
       <body className="min-h-full">{children}</body>
     </html>
   );
