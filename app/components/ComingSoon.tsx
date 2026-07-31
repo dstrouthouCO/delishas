@@ -4,7 +4,7 @@ export default function ComingSoon() {
   return (
     <div className="animate-paper relative mx-auto flex w-full max-w-[830px] items-center justify-center">
       <Image
-        src="/comingsoon.png"
+        src="/coming-soon.png"
         alt="Coming soon"
         width={771}
         height={331}

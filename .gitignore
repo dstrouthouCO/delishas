@@ -65,3 +65,6 @@ next-env.d.ts
 Thumbs.db
 ehthumbs.db
 Desktop.ini
+
+# local backup of the un-processed coming-soon image
+coming-soon-original.png

@@ -14,8 +14,8 @@ Open http://localhost:3000.
 
 Live in `public/`:
 
-- `logo.mp4` — the animated DELISHAS wordmark. Rendered with `mix-blend-multiply` so its white background disappears into the page, cropped to a tight window, and played **once** (freezes on the finished logo — see `app/components/LogoVideo.tsx`).
-- `comingsoon.png` — the torn-paper "COMING SOON" graphic (`unoptimized` so swapping the file just needs a reload).
+- `logo.mp4` — the animated DELISHAS wordmark. The page background is **white** so the video's white background blends in every browser (Safari won't apply `mix-blend-mode`/filters to `<video>`). Cropped to a tight window and played **once** (freezes on the finished logo — see `app/components/LogoVideo.tsx`).
+- `coming-soon.png` — the torn-paper "COMING SOON" graphic, with its background knocked out to **transparent** (`unoptimized`, so swapping the file just needs a reload). The un-processed original is kept at project root as `coming-soon-original.png` (gitignored).
 - `social/*.svg` — the footer social icons.
 
 ## Notify form → Google Sheet
