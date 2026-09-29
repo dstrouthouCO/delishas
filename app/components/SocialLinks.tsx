@@ -21,7 +21,7 @@ const socials: Social[] = [
     href: "https://www.tiktok.com/@delishas.snacks",
     file: "/social/tiktok.svg",
   },
-  { label: "LinkedIn", href: "https://linkedin.com", file: "/social/linkedin.svg" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/company/delishas", file: "/social/linkedin.svg" },
 ];
 
 export default function SocialLinks() {
